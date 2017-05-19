@@ -145,9 +145,9 @@ class ViewController: UIViewController {
             if cheeseLocation.x > x {
                 // Move to down direction
                 if  direction != "up"  {
-                    let (succes2, solution2) = solveMaze(maze: maze, x: x + 1, y: y, sol: sol, cheeseLocation, jeryLocation, direction: "down")
-                    if succes2 {
-                        return (true,solution2);
+                    let (succes, solution) = solveMaze(maze: maze, x: x + 1, y: y, sol: sol, cheeseLocation, jeryLocation, direction: "down")
+                    if succes {
+                        return (true,solution);
                     }
                 }
             }
@@ -155,9 +155,9 @@ class ViewController: UIViewController {
             if cheeseLocation.y < y {
                 // Move to left direction
                 if  direction != "right" {
-                    let (succes3, solution3) = solveMaze(maze: maze, x: x, y: y - 1, sol: sol, cheeseLocation, jeryLocation, direction: "left")
-                    if succes3 {
-                        return (true,solution3);
+                    let (succes, solution) = solveMaze(maze: maze, x: x, y: y - 1, sol: sol, cheeseLocation, jeryLocation, direction: "left")
+                    if succes {
+                        return (true,solution);
                     }
                 }
             }
@@ -165,9 +165,9 @@ class ViewController: UIViewController {
             if cheeseLocation.x < x {
                 // Move to up direction
                 if  direction != "down"  {
-                    let (succes4, solution4) = solveMaze(maze: maze, x: x - 1, y: y, sol: sol, cheeseLocation, jeryLocation,direction: "up")
-                    if succes4 {
-                        return (true,solution4);
+                    let (succes, solution) = solveMaze(maze: maze, x: x - 1, y: y, sol: sol, cheeseLocation, jeryLocation,direction: "up")
+                    if succes {
+                        return (true,solution);
                     }
                 }
             }
